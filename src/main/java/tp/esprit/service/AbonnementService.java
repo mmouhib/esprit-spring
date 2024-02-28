@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tp.esprit.entities.Abonnement;
 import tp.esprit.repository.IAbonnementRepository;
+import tp.esprit.service.interfaces.IAbonnementService;
 
 @Service
 public class AbonnementService implements IAbonnementService {

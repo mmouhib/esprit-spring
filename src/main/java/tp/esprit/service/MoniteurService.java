@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tp.esprit.entities.Moniteur;
 import tp.esprit.repository.IMoniteurRepository;
+import tp.esprit.service.interfaces.IMoniteurService;
 
 import java.util.List;
 

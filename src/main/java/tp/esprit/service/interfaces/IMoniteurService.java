@@ -1,4 +1,4 @@
-package tp.esprit.service;
+package tp.esprit.service.interfaces;
 
 import tp.esprit.entities.Moniteur;
 
