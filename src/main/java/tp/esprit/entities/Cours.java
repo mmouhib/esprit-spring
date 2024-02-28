@@ -3,7 +3,10 @@ package tp.esprit.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.*;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -11,7 +14,6 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-
 public class Cours {
 
     @Id
@@ -19,4 +21,6 @@ public class Cours {
     private int niveau;
     private TypeCours typeCours;
     private Support support;
+    @OneToMany(mappedBy = "cours")
+    private List<Inscription> inscriptions;
 }

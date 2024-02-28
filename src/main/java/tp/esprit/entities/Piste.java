@@ -3,7 +3,10 @@ package tp.esprit.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import lombok.*;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -20,4 +23,6 @@ public class Piste {
     private Couleur couleur;
     private int longueur;
     private int pente;
+    @ManyToMany
+    private List<Skieur> skieurs;
 }

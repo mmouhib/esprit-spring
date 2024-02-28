@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Setter
 @Getter
@@ -18,4 +19,10 @@ public class Person implements Serializable {
     @Enumerated(EnumType.STRING)
     private Speciality speciality;
 
+    @ManyToMany(mappedBy = "skieurs")
+    private List<Piste> pistes;
+    @OneToOne
+    private Abonnement abonnement;
+    @OneToMany(mappedBy = "skieur")
+    private List<Inscription> inscriptions;
 }
